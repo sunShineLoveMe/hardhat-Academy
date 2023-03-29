@@ -518,6 +518,82 @@
       "artifacts": [
         "IERC165"
       ]
+    },
+    "/Users/june/Documents/区块链/开发/hardhat/hardhat-wtf-solidity/contracts/MerkleTree.sol": {
+      "lastModificationDate": 1680073869740,
+      "contentHash": "4b52833b5c9a0eefdd95230e0e3a77ae",
+      "sourceName": "contracts/MerkleTree.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/ERC721.sol",
+        "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol",
+        "@openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "../lib/MerkleProof.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "MerkleTree"
+      ]
+    },
+    "/Users/june/Documents/区块链/开发/hardhat/hardhat-wtf-solidity/lib/MerkleProof.sol": {
+      "lastModificationDate": 1680061703746,
+      "contentHash": "30ce9252f50a4c0eec7e13ef3af7cce1",
+      "sourceName": "lib/MerkleProof.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "MerkleProof"
+      ]
     }
   }
 }
