@@ -594,6 +594,82 @@
       "artifacts": [
         "MerkleProof"
       ]
+    },
+    "/Users/june/Documents/区块链/开发/hardhat/hardhat-wtf-solidity/contracts/NFTSwap.sol": {
+      "lastModificationDate": 1680530254003,
+      "contentHash": "96f151934186b505ddbedd904dd0e948",
+      "sourceName": "contracts/NFTSwap.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+        "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
+        "./WTFApe.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "NFTSwap"
+      ]
+    },
+    "/Users/june/Documents/区块链/开发/hardhat/hardhat-wtf-solidity/contracts/WTFApe.sol": {
+      "lastModificationDate": 1680530122682,
+      "contentHash": "c830d3746a43001d3e72afd29a19fbff",
+      "sourceName": "contracts/WTFApe.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/ERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "WTFApe"
+      ]
     }
   }
 }
