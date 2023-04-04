@@ -29,10 +29,6 @@ describe("初始化ApeNft并mint", () => {
         // console.log("wtfApeContract最大值: ", await wtfApeContract.MAX_APES());
     })
 
-    // it("验证部署合约的所有者是否一致", async() => {
-    //     expect(await wtfApeContract.owner()).to.equal(await owner.address);
-    // })
-
     it("owner地址mint tokenId为0", async() => {
         // owner mint 0
         await wtfApeContract.mint(owner.address, 0);
@@ -44,15 +40,29 @@ describe("初始化ApeNft并mint", () => {
         await wtfApeContract.mint(owner.address, 1);
         expect(await wtfApeContract.ownerOf(1)).to.equal(await owner.address);
     })
-    
+
     it("上架的nft中tokenId为0的NFT授权给nftswap合约", async() => {
-        // owner mint 0
-        await wtfApeContract.approve(nFTSwapContract.address, 1);
-        expect(await wtfApeContract.getApproved(1)).to.equal(await nFTSwapContract.address);
+        await wtfApeContract.mint(owner.address, 0);
+        await wtfApeContract.approve(await nFTSwapContract.address, 0);
+        expect(await wtfApeContract.getApproved(0)).to.equal(await nFTSwapContract.address);
     })
-    
-    // it("验证nfswap合约地址是否一致", async() => {
-    //     expect(await nFTSwapContract).to.equal(await wtfApeContract.address);
-    // })
+
+    it("上架tokenId为2的NFT", async() => {
+        // wtfApeContract 合约mint
+        await wtfApeContract.mint(owner.address, 2);
+        // wtfApeContract 合约授权给 nftswap 合约
+        await wtfApeContract.approve(await nFTSwapContract.address, 2);
+        await nFTSwapContract.list(wtfApeContract.address, 2, ethers.utils.parseEther("1"));
+        // await expect(await nFTSwapContract.list(wtfApeContract.address, 2, 100)).to.emit(
+        //     nFTSwapContract,
+        //     "List"
+        // ).withArgs(owner.address, wtfApeContract.address, 2, 100);
+        
+        // const orderNft = await nFTSwapContract.nftList[wtfApeContract.address][2];
+        console.log(await nFTSwapContract.nftList(wtfApeContract.address, 2), "order信息");
+        // expect(orderNft.owner).to.equal(await wtfApeContract.address);
+        // expect(await wtfApeContract.getApproved(1)).to.equal(await nFTSwapContract.address);
+    })
+
 
 })
